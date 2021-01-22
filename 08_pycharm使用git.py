@@ -4,6 +4,5 @@
 # @Author  : 小海腾
 
 
-def func():
-    pass
-
+# 要关联一个远程库，使用命令git remote add origin git@server-name:path/repo-name.git；
+# 在pycharm中可以用share project on github这个命令直接关联一个远程库。
