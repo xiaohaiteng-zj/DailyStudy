@@ -23,4 +23,9 @@
 
 # git分支管理
 # HEAD指向当前的分支，当前的分支指向提交
-
+# 1、查看分支：git branch命令会列出所有分支，当前分支前面会标一个*号
+# 2、创建分支：git branch <name>
+# 3、切换分支：git checkout <name>或者git switch <name>
+# 4、创建+切换分支：git checkout -b <name>或者git switch -c <name>
+# 5、合并某分支到当前分支：git merge <name>
+# 6、删除分支：git branch -d <name>
