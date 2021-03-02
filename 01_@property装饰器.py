@@ -11,6 +11,7 @@ class Student(object):
     school = "华东师范大学"
     name = ''
     _score = 100
+    _total_short_stock_by_truck = False
 
     @property
     def score(self):
@@ -24,6 +25,18 @@ class Student(object):
             raise ValueError("分数必须在0-100之间")
         self._score = value
 
+    @property
+    def total_short_stock_by_truck_(self):
+        """SKU-各仓的汽运总缺货量"""
+        if not self._total_short_stock_by_truck:
+            self._total_short_stock_by_truck = 10000
+
+        return self._total_short_stock_by_truck
+
+    @total_short_stock_by_truck_.setter
+    def total_short_stock_by_truck_(self, value):
+        self._total_short_stock_by_truck -= value
+
 
 if __name__ == '__main__':
     s = Student()
@@ -33,4 +46,7 @@ if __name__ == '__main__':
     print(s.school)
     print(s.name)
     print(s.score)
+    print(s.total_short_stock_by_truck_)
+    s._total_short_stock_by_truck_ = 300
+    print(s.total_short_stock_by_truck_)
 
